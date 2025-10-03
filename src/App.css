@@ -1,38 +1,167 @@
+/*
+  VARIABLES DE COLOR
+  Una paleta sobria y profesional
+*/
+:root {
+  --color-primary: #0077b6; /* Azul Oscuro, como el agua */
+  --color-secondary: #00b4d8; /* Azul Claro, para acentos (usado en hover) */
+  --color-text: #333; /* Texto principal oscuro */
+  --color-background: #f8f9fa; /* Fondo muy claro */
+  --color-light-gray: #e9ecef; /* Separadores sutiles */
+  --color-danger: #dc3545; /* Rojo para peligro */
+}
+
+/* ---------------------------------------------------- */
+/* 1. Reset Básico y Estructura Principal */
+/* ---------------------------------------------------- */
+html, body, #root {
+  height: 100%; 
+  margin: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  line-height: 1.6;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  min-height: 100vh; /* Para que el footer siempre esté en la base */
+}
+
+main {
+  flex-grow: 1; /* El contenido principal se estira y empuja el footer */
+}
+
+h1 {
+  color: var(--color-primary);
+  border-bottom: 2px solid var(--color-light-gray);
+  padding-bottom: 10px;
+  margin-top: 0;
+  font-weight: 300; 
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+}
+
+/* ---------------------------------------------------- */
+/* 2. Navbar y Footer */
+/* ---------------------------------------------------- */
+
+/* Navbar */
+nav {
+  background-color: var(--color-primary);
+  padding: 15px 5%;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.App-link {
-  color: #61dafb;
+/* Título/Logo de la App (Grande) */
+.app-title a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.8em; /* TAMAÑO GRANDE para el título/logo */
+  font-weight: 700; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Enlaces de Navegación */
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 20px;
+  transition: color 0.3s;
+  padding: 5px 0;
+  font-size: 1.1em; /* TAMAÑO UNIFORME para la navegación */
 }
+
+.nav-links a:hover {
+  color: var(--color-secondary);
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: var(--color-light-gray);
+  padding: 25px 15px; /* Más padding para los íconos */
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: auto; /* Se asegura de pegarse al fondo si el contenido es corto */
+  font-size: 0.8em;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* 🚨 Estilos para los Íconos de Redes Sociales */
+.social-icons {
+  margin-bottom: 15px; 
+}
+
+.social-icons a {
+  /* Estilo base del ícono */
+  color: var(--color-light-gray); 
+  text-decoration: none;
+  font-size: 1.5em; /* Tamaño del ícono */
+  margin: 0 10px;
+  /* 🚨 Transición suave para el efecto hover */
+  transition: color 0.3s ease-in-out; 
+}
+
+/* 🚨 EFECTO HOVER: Cambia el color al pasar el mouse */
+.social-icons a:hover {
+  color: var(--color-secondary); /* Color de acento al pasar el mouse */
+}
+
+
+/* ---------------------------------------------------- */
+/* 4. Estilos de Tabla y Formularios (Sin cambios mayores) */
+/* ---------------------------------------------------- */
+
+/* Formulario */
+form div { margin-bottom: 15px; }
+label { display: block; margin-bottom: 5px; font-weight: 600; color: var(--color-text); }
+input[type="text"], input[type="number"], select, textarea {
+  width: 100%; padding: 10px; border: 1px solid var(--color-light-gray); border-radius: 4px;
+  box-sizing: border-box; font-size: 1em; transition: border-color 0.3s, box-shadow 0.3s;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: var(--color-secondary); box-shadow: 0 0 0 2px rgba(0, 180, 216, 0.2); outline: none;
+}
+button[type="submit"], button {
+  background-color: var(--color-primary); color: white; padding: 10px 20px; border: none;
+  border-radius: 4px; cursor: pointer; font-size: 1em; font-weight: 600; transition: background-color 0.3s;
+  margin-right: 10px;
+}
+button:hover { background-color: var(--color-secondary); }
+
+/* Botón de Eliminar */
+button[style*="background-color: red"] { background-color: var(--color-danger) !important; }
+button[style*="background-color: red"]:hover { background-color: #c82333 !important; }
+
+/* Tabla */
+table {
+  width: 100%; border-collapse: collapse; margin-top: 20px; background: #fff;
+  border: 1px solid var(--color-light-gray); border-radius: 8px; overflow: hidden;
+}
+th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid var(--color-light-gray); }
+th {
+  background-color: var(--color-light-gray); color: var(--color-text); font-weight: 600;
+  text-transform: uppercase; font-size: 0.9em;
+}
+tr:nth-child(even) { background-color: #f3f4f5; }
+tr:last-child td { border-bottom: none; }
