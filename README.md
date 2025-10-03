@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+💧 Control de Stock Hídrico (Proyecto Final de Desarrollo Web)
+Esta es una aplicación web de página única (SPA) desarrollada con React para la gestión eficiente del inventario de materiales utilizados en la red de agua potable. El proyecto implementa un CRUD completo (Crear, Leer, Actualizar, Eliminar) utilizando Firebase Firestore como base de datos.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Características Principales
+CRUD Completo: Permite registrar nuevos materiales, consultar existencias, modificar detalles (precio, nombre) y eliminar ítems.
 
-## Available Scripts
+Gestión de Movimientos: Función dedicada para registrar entradas (ingreso) y salidas (uso) de material, actualizando el stock en tiempo real.
 
-In the project directory, you can run:
+Tecnología: Desarrollado con React JS, Firebase Firestore y React Router DOM.
 
-### `npm start`
+Diseño Profesional: Interfaz de usuario limpia, intuitiva y con estilos CSS personalizados y uso de íconos de Font Awesome.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Estructura del Proyecto
+El proyecto está organizado de la siguiente manera:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+/src/pages: Contiene las vistas principales (Home, Inventario, Movimientos, NuevoMaterial, EditarMaterial).
 
-### `npm test`
+/src/components: Contiene componentes reutilizables (Navbar, Footer).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+/src/firebase-config.js: Archivo de conexión y configuración con Firebase.
 
-### `npm run build`
+🚀 Cómo Ejecutar Localmente
+Sigue estos pasos para clonar el repositorio y ejecutar la aplicación en tu máquina:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clonar el Repositorio
+Abre tu terminal y ejecuta:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Bash
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+git clone https://github.com/Matiascalazan/control-stock-materiales.git
+cd control-stock-materiales
+2. Instalar Dependencias
+Instala todas las librerías y dependencias necesarias (React Router, Firebase, Font Awesome, etc.):
 
-### `npm run eject`
+Bash
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+npm install
+3. Configurar Firebase
+Para que la aplicación se conecte a la base de datos, debes crear un archivo de configuración:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Crea un archivo llamado .env.local en la raíz del proyecto (a la misma altura que package.json).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Añade tus credenciales de la consola de Firebase en este archivo. Asegúrate de usar el prefijo REACT_APP_ y de no usar comillas:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+REACT_APP_API_KEY=AIzaSyAxxxxxxxxxxxxxxxxxxxxxxxxxxx
+REACT_APP_AUTH_DOMAIN=app-deposito-c241c.firebaseapp.com
+REACT_APP_PROJECT_ID=app-deposito-c241c
+REACT_APP_STORAGE_BUCKET=app-deposito-c241c.appspot.com
+REACT_APP_MESSAGING_SENDER_ID=541685188745
+REACT_APP_APP_ID=1:35188745:web:ee61e06790bae813ad9e58
+(Reemplaza los valores anteriores con tus credenciales reales.)
 
-## Learn More
+4. Iniciar la Aplicación
+Una vez configurado Firebase, puedes iniciar la aplicación:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Bash
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+npm start
+El proyecto se abrirá automáticamente en tu navegador en http://localhost:3000.
 
-### Code Splitting
+🌐 URL del Proyecto Desplegado
+El proyecto está desplegado en Vercel y accesible en la siguiente URL:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+https://control-stock-materiales.vercel.app/
