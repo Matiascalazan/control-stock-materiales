@@ -61,21 +61,18 @@ const Inventario = () => {
               <th>Existencias</th>
               <th>Unidad</th>
               <th>Precio</th>
-              <th>Acciones</th> {/* Nueva columna para los botones */}
+              <th>Acciones</th> 
             </tr>
           </thead>
           <tbody>
             {materiales.map((material) => (
               <tr key={material.id}>
-                {/* Usamos las mayúsculas iniciales que ya corregimos */}
                 <td>{material.Nombre || 'N/A'}</td>      
                 <td>{material.Stock || 'N/A'}</td>       
                 <td>{material.Unidad || 'N/A'}</td> 
                 <td>${material.Precio ? material.Precio.toFixed(2) : 'N/A'}</td>
                 
-                {/* Columna de Acciones */}
                 <td>
-                  {/* Botón de Eliminar (DELETE) */}
                   <button 
                     onClick={() => deleteMaterial(material.id, material.Nombre)}
                     style={{ backgroundColor: 'red', color: 'white', border: 'none', padding: '5px 10px', cursor: 'pointer' }}

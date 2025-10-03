@@ -60,7 +60,6 @@ const Movimientos = () => {
     }
 
     try {
-      // 1. 🚨 REQUISITO BÁSICO: Mostrar información por consola
       console.log("--- REGISTRO DE SALIDA DE STOCK ---");
       console.log("Material ID:", idMaterial);
       console.log("Material Nombre:", materialUsado.Nombre);
@@ -90,7 +89,7 @@ const Movimientos = () => {
   return (
     <div className="container">
       <h1>Registro de Uso (Salida) de Materiales</h1>
-      <p>Registra la cantidad de material que se ha utilizado en una faena.</p>
+      <p>Registra la cantidad de material que se ha utilizado en una Orden de Trabajo.</p>
 
       <form onSubmit={registrarSalida}>
         
@@ -130,7 +129,7 @@ const Movimientos = () => {
 
         {/* Campo 3: Responsable */}
         <div>
-          <label htmlFor="responsable">Responsable de la Faena:</label>
+          <label htmlFor="responsable">Responsable de la Orden de Trabajo:</label>
           <input
             type="text"
             id="responsable"

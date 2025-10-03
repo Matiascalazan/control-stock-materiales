@@ -1,19 +1,12 @@
-/*
-  VARIABLES DE COLOR
-  Una paleta sobria y profesional
-*/
 :root {
-  --color-primary: #0077b6; /* Azul Oscuro, como el agua */
-  --color-secondary: #00b4d8; /* Azul Claro, para acentos (usado en hover) */
-  --color-text: #333; /* Texto principal oscuro */
-  --color-background: #f8f9fa; /* Fondo muy claro */
-  --color-light-gray: #e9ecef; /* Separadores sutiles */
-  --color-danger: #dc3545; /* Rojo para peligro */
+  --color-primary: #0077b6; 
+  --color-secondary: #00b4d8; 
+  --color-text: #333; 
+  --color-background: #f8f9fa; 
+  --color-light-gray: #e9ecef; 
+  --color-danger: #dc3545; 
 }
 
-/* ---------------------------------------------------- */
-/* 1. Reset Básico y Estructura Principal */
-/* ---------------------------------------------------- */
 html, body, #root {
   height: 100%; 
   margin: 0;
@@ -29,11 +22,11 @@ body {
 .App {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Para que el footer siempre esté en la base */
+  min-height: 100vh; 
 }
 
 main {
-  flex-grow: 1; /* El contenido principal se estira y empuja el footer */
+  flex-grow: 1; 
 }
 
 h1 {
@@ -54,11 +47,6 @@ h1 {
   border-radius: 8px;
 }
 
-/* ---------------------------------------------------- */
-/* 2. Navbar y Footer */
-/* ---------------------------------------------------- */
-
-/* Navbar */
 nav {
   background-color: var(--color-primary);
   padding: 15px 5%;
@@ -68,15 +56,13 @@ nav {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Título/Logo de la App (Grande) */
 .app-title a {
   color: #fff;
   text-decoration: none;
-  font-size: 1.8em; /* TAMAÑO GRANDE para el título/logo */
+  font-size: 1.8em; 
   font-weight: 700; 
 }
 
-/* Enlaces de Navegación */
 .nav-links a {
   color: #fff;
   text-decoration: none;
@@ -84,22 +70,22 @@ nav {
   margin-left: 20px;
   transition: color 0.3s;
   padding: 5px 0;
-  font-size: 1.1em; /* TAMAÑO UNIFORME para la navegación */
+  font-size: 1.1em; 
 }
 
 .nav-links a:hover {
   color: var(--color-secondary);
 }
 
-/* Footer */
+
 footer {
   background-color: #333;
   color: var(--color-light-gray);
-  padding: 25px 15px; /* Más padding para los íconos */
+  padding: 25px 15px; 
   text-align: center;
   width: 100%;
   box-sizing: border-box;
-  margin-top: auto; /* Se asegura de pegarse al fondo si el contenido es corto */
+  margin-top: auto; 
   font-size: 0.8em;
 }
 
@@ -107,32 +93,22 @@ footer p {
     margin: 5px 0;
 }
 
-/* 🚨 Estilos para los Íconos de Redes Sociales */
 .social-icons {
   margin-bottom: 15px; 
 }
 
 .social-icons a {
-  /* Estilo base del ícono */
   color: var(--color-light-gray); 
   text-decoration: none;
-  font-size: 1.5em; /* Tamaño del ícono */
+  font-size: 1.5em; 
   margin: 0 10px;
-  /* 🚨 Transición suave para el efecto hover */
   transition: color 0.3s ease-in-out; 
 }
 
-/* 🚨 EFECTO HOVER: Cambia el color al pasar el mouse */
 .social-icons a:hover {
-  color: var(--color-secondary); /* Color de acento al pasar el mouse */
+  color: var(--color-secondary); 
 }
 
-
-/* ---------------------------------------------------- */
-/* 4. Estilos de Tabla y Formularios (Sin cambios mayores) */
-/* ---------------------------------------------------- */
-
-/* Formulario */
 form div { margin-bottom: 15px; }
 label { display: block; margin-bottom: 5px; font-weight: 600; color: var(--color-text); }
 input[type="text"], input[type="number"], select, textarea {
@@ -149,11 +125,9 @@ button[type="submit"], button {
 }
 button:hover { background-color: var(--color-secondary); }
 
-/* Botón de Eliminar */
 button[style*="background-color: red"] { background-color: var(--color-danger) !important; }
 button[style*="background-color: red"]:hover { background-color: #c82333 !important; }
 
-/* Tabla */
 table {
   width: 100%; border-collapse: collapse; margin-top: 20px; background: #fff;
   border: 1px solid var(--color-light-gray); border-radius: 8px; overflow: hidden;
